@@ -16,6 +16,7 @@ pipeline {
         stage('ui') {
           steps {
             build(job: 'UI_tests', propagate: true, wait: true)
+            sh 'echo "Test"'
           }
         }
       }
